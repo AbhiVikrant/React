@@ -170,7 +170,7 @@ yarn add @mui/material @emotion/react @emotion/styled
 
   **Basic Checkbox **
 
-  <div style="border: solid 10px #0000 "><img src="./Images/basic_Checkbox.png" alt="two" style=""/></div>
+  <div style="border: solid 10px #0000 "><img src="./Images/basic_checkbox.png" alt="" style=""/></div>
 
   ```typescript
   import * as React from 'react';
@@ -193,7 +193,7 @@ yarn add @mui/material @emotion/react @emotion/styled
 
   **Label Checkboxes**
 
-  <div style="border: solid 10px #0000 "><img src="./Images/label_Checkbox.png" alt="two" style=""/></div>
+  <div style="border: solid 10px #0000 "><img src="./Images/label_checkbox.png" alt="" style=""/></div>
 
   ```typescript
   import * as React from 'react';
