@@ -57,7 +57,7 @@ You can install React using npm package manager by using the below command. Ther
   ```nginx
   /* [Enter_App_Name] is basically the Application Name you wish to keep */
   > npx create-react-app [Enter_App_Name]
-
+  
   ```
 
   The above command will install the react and create a new project with the name of App. This app contains the following sub-folders and files by default which can be shown in the below image.
@@ -147,7 +147,7 @@ yarn add @mui/material @emotion/react @emotion/styled
     import * as React from 'react';
     import Stack from '@mui/material/Stack';
     import Button from '@mui/material/Button';
-
+    
     export default function BasicButtons() {
       return (
         <Stack spacing={2} direction="row">
@@ -157,7 +157,7 @@ yarn add @mui/material @emotion/react @emotion/styled
         </Stack>
       );
     }
-
+    
     ```
 
 
@@ -175,9 +175,9 @@ yarn add @mui/material @emotion/react @emotion/styled
   ```typescript
   import * as React from 'react';
   import Checkbox from '@mui/material/Checkbox';
-
+  
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
+  
   export default function Checkboxes() {
     return (
       <div>
@@ -188,7 +188,7 @@ yarn add @mui/material @emotion/react @emotion/styled
       </div>
     );
   }
-
+  
   ```
 
   **Label Checkboxes**
@@ -200,7 +200,7 @@ yarn add @mui/material @emotion/react @emotion/styled
   import FormGroup from '@mui/material/FormGroup';
   import FormControlLabel from '@mui/material/FormControlLabel';
   import Checkbox from '@mui/material/Checkbox';
-
+  
   export default function CheckboxLabels() {
     return (
       <FormGroup>
@@ -209,7 +209,7 @@ yarn add @mui/material @emotion/react @emotion/styled
       </FormGroup>
     );
   }
-
+  
   ```
 
 
@@ -222,7 +222,7 @@ yarn add @mui/material @emotion/react @emotion/styled
 
   Use radio buttons when the user needs to see all available options. If available options can be collapsed, consider using a Select component because it uses less space. Radio buttons should have the most commonly used option selected by default.
 
-  <div style="border: solid 10px #0000 "><img src="./Images/radio_button.png" alt="two" style=""/></div>
+  <div style="border: solid 10px #0000 "><img src="./Images/radio_button.png" alt="" style=""/></div>
 
   ```typescript
   <FormControl>
@@ -245,6 +245,83 @@ yarn add @mui/material @emotion/react @emotion/styled
 
 - #### How to create a grid component inside your react page using MUI?
 
-- #### How to create an input text-field inside your react page using MUI?
+  <div style="border: solid 10px #0000 "><img src="./Images/grid.png" alt="" style=""/></div>
 
+  ```typescript
+  import * as React from 'react';
+  import Grid from '@mui/material/Grid';
+  import FormLabel from '@mui/material/FormLabel';
+  import FormControl from '@mui/material/FormControl';
+  import FormControlLabel from '@mui/material/FormControlLabel';
+  import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
+  import RadioGroup from '@mui/material/RadioGroup';
+  import Radio from '@mui/material/Radio';
+  import Paper from '@mui/material/Paper';
+  
+  export default function SpacingGrid() {
+    const [spacing, setSpacing] = React.useState(2);
+  
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSpacing(Number((event.target as HTMLInputElement).value));
+    };
+  
+    const jsx = `
+  <Grid container spacing={${spacing}}>
+  `;
+  
+    return (
+      <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+        <Grid item xs={12}>
+          <Grid container justifyContent="center" spacing={spacing}>
+            {[0, 1, 2].map((value) => (
+              <Grid key={value} item>
+                <Paper
+                  sx={{
+                    height: 140,
+                    width: 100,
+                    backgroundColor: (theme) =>
+                      theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+                  }}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper sx={{ p: 2 }}>
+            <Grid container>
+              <Grid item>
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">spacing</FormLabel>
+                  <RadioGroup
+                    name="spacing"
+                    aria-label="spacing"
+                    value={spacing.toString()}
+                    onChange={handleChange}
+                    row
+                  >
+                    {[0, 0.5, 1, 2, 3, 4, 8, 12].map((value) => (
+                      <FormControlLabel
+                        key={value}
+                        value={value.toString()}
+                        control={<Radio />}
+                        label={value.toString()}
+                      />
+                    ))}
+                  </RadioGroup>
+                </FormControl>
+              </Grid>
+            </Grid>
+          </Paper>
+          <HighlightedCode code={jsx} language="jsx" />
+        </Grid>
+      </Grid>
+    );
+  }
+  
+  ```
+
+  
+
+  
 
