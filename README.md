@@ -193,7 +193,7 @@ yarn add @mui/material @emotion/react @emotion/styled
 
   **Label Checkboxes**
 
-  <div style="border: solid 10px #0000 "><img src="./Images/label_Checkbox.png" alt="two" style=""/></div>
+  <div style="border: solid 10px #0000 "><img src="./Images/label_Checkbox.png" alt="" style=""/></div>
 
   ```typescript
   import * as React from 'react';
@@ -217,6 +217,29 @@ yarn add @mui/material @emotion/react @emotion/styled
   
 
 - #### How to create a radio button component inside your react page using MUI?
+
+  <code>Radio Buttons</code>
+
+  Use radio buttons when the user needs to see all available options. If available options can be collapsed, consider using a Select component because it uses less space. Radio buttons should have the most commonly used option selected by default.
+
+  <div style="border: solid 10px #0000 "><img src="./Images/radio_button.png" alt="two" style=""/></div>
+
+  ```typescript
+  <FormControl>
+    <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
+    <RadioGroup
+      aria-labelledby="demo-controlled-radio-buttons-group"
+      name="controlled-radio-buttons-group"
+      value={value}
+      onChange={handleChange}
+    >
+      <FormControlLabel value="female" control={<Radio />} label="Female" />
+      <FormControlLabel value="male" control={<Radio />} label="Male" />
+    </RadioGroup>
+  </FormControl>
+  ```
+
+  
 
 - #### How to create a calendar component inside your react page using MUI?
 
