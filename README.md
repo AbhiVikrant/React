@@ -27,15 +27,15 @@ We will learn how to set up an environment for the successful development of Rea
 
    Note: We are using the second way of installing and creating the React JS Application. And before start creating the React App, We have listed out some commands to know the version of the Node and NPM.
 
-   
+
 
    ```react
    // To find the version of Node and NPM
     node -v // shows the current installed version of node
-    npm -v  // shows the currrent installed version of npm 
+    npm -v  // shows the currrent installed version of npm
    ```
 
-   
+
 
              ###       Using the create-react-app command
 
@@ -47,24 +47,24 @@ You can install React using npm package manager by using the below command. Ther
 - Move to the directory in which you wish to create your react app
 
   ```shell
-  C:\Users\PT38475> 
+  C:\Users\PT38475>
   > mkdir myReactApp
-  > C:\Users\PT38475\myReactApp> 
+  > C:\Users\PT38475\myReactApp>
   ```
 
 - Now, run the following command to create your first React Application
 
   ```nginx
   /* [Enter_App_Name] is basically the Application Name you wish to keep */
-  > npx create-react-app [Enter_App_Name] 
-  
+  > npx create-react-app [Enter_App_Name]
+
   ```
 
   The above command will install the react and create a new project with the name of App. This app contains the following sub-folders and files by default which can be shown in the below image.
 
   <div style="border: solid 10px #0000 "><img src="./Images/one.png" alt="React logo" style=""/></div>
 
-Now, to get started, open the **src** folder and make changes in your desired file. 
+Now, to get started, open the **src** folder and make changes in your desired file.
 
 <p>In React application, there are several files and folders in the root directory. Some of them are as follows:</p>
 
@@ -147,7 +147,7 @@ yarn add @mui/material @emotion/react @emotion/styled
     import * as React from 'react';
     import Stack from '@mui/material/Stack';
     import Button from '@mui/material/Button';
-    
+
     export default function BasicButtons() {
       return (
         <Stack spacing={2} direction="row">
@@ -157,10 +157,10 @@ yarn add @mui/material @emotion/react @emotion/styled
         </Stack>
       );
     }
-    
+
     ```
 
-    
+
 
 - #### How to create a checkbox component inside your react page using MUI?
 
@@ -170,14 +170,14 @@ yarn add @mui/material @emotion/react @emotion/styled
 
   **Basic Checkbox **
 
-  <div style="border: solid 10px #0000 "><img src="./Images/basic_Checkbox.png" alt="two" style=""/></div>
+  <div style="border: solid 10px #0000 "><img src="./Images/basic_checkbox.png" alt="" style=""/></div>
 
   ```typescript
   import * as React from 'react';
   import Checkbox from '@mui/material/Checkbox';
-  
+
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-  
+
   export default function Checkboxes() {
     return (
       <div>
@@ -188,19 +188,19 @@ yarn add @mui/material @emotion/react @emotion/styled
       </div>
     );
   }
-  
+
   ```
 
   **Label Checkboxes**
 
-  <div style="border: solid 10px #0000 "><img src="./Images/label_Checkbox.png" alt="" style=""/></div>
+  <div style="border: solid 10px #0000 "><img src="./Images/label_checkbox.png" alt="" style=""/></div>
 
   ```typescript
   import * as React from 'react';
   import FormGroup from '@mui/material/FormGroup';
   import FormControlLabel from '@mui/material/FormControlLabel';
   import Checkbox from '@mui/material/Checkbox';
-  
+
   export default function CheckboxLabels() {
     return (
       <FormGroup>
@@ -209,12 +209,12 @@ yarn add @mui/material @emotion/react @emotion/styled
       </FormGroup>
     );
   }
-  
+
   ```
 
-  
 
-  
+
+
 
 - #### How to create a radio button component inside your react page using MUI?
 
@@ -239,7 +239,7 @@ yarn add @mui/material @emotion/react @emotion/styled
   </FormControl>
   ```
 
-  
+
 
 - #### How to create a calendar component inside your react page using MUI?
 
@@ -247,4 +247,4 @@ yarn add @mui/material @emotion/react @emotion/styled
 
 - #### How to create an input text-field inside your react page using MUI?
 
-  
+
